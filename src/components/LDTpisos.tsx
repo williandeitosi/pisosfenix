@@ -156,7 +156,29 @@ const FloorTypeSection: React.FC = () => {
   );
 };
 
-
+const StructureSection: React.FC = () => (
+  <section className="container mx-auto flex flex-col-reverse items-center justify-between px-4 py-16 md:flex-row">
+    <div className="relative h-64 w-full md:h-96 md:w-1/2 mb-8 md:mb-0">
+      <img
+        src={estruturaImage}
+        alt="Nossa estrutura"
+        className="h-full w-full object-cover rounded-lg"
+      />
+    </div>
+    <div className="max-w-2xl text-center md:text-left md:ml-8">
+      <h2 className="mb-4 text-4xl font-bold text-white">Nossa estrutura</h2>
+      <p className="mb-6 text-xl text-green-400">Solidez e qualidade em cada peça.</p>
+      <p className="mb-8 text-gray-300">
+        Nossa estrutura é projetada para oferecer máxima estabilidade e durabilidade. 
+        Utilizamos materiais de alta qualidade e tecnologias avançadas para garantir 
+        que nossos pisos atendam às mais exigentes demandas de eventos e instalações.
+      </p>
+      <button className="rounded-md bg-green-700 px-6 py-3 text-lg font-semibold text-white hover:bg-[#006400]">
+        Faça um orçamento
+      </button>
+    </div>
+  </section>
+);
 
 const CriadeckPage: React.FC = () => {
   return (
@@ -165,6 +187,7 @@ const CriadeckPage: React.FC = () => {
       <MainSection />
       <ImageSection />
       <FloorTypeSection />
+      <StructureSection />
     </div>
   );
 };
