@@ -81,6 +81,82 @@ const ImageSection: React.FC = () => {
   );
 };
 
+interface FloorType {
+  name: string;
+  image: string;
+  description: string;
+}
+
+const FloorTypeSection: React.FC = () => {
+  const [selectedFloor, setSelectedFloor] = useState<FloorType | null>(null);
+
+  const floorTypes: FloorType[] = [
+    {
+      name: "Piso deck",
+      image: pisoDeck,
+      description: "Nosso piso deck é perfeito para áreas externas, oferecendo durabilidade e estética. Feito de materiais resistentes às intempéries, é ideal para eventos ao ar livre, piscinas e terraços."
+    },
+    {
+      name: "Piso Madeira",
+      image: pisoMadeira,
+      description: "O piso madeira combina a beleza natural da madeira com a praticidade do plástico. É excelente para eventos internos, proporcionando um ambiente acolhedor e sofisticado, sem a necessidade de manutenção intensiva."
+    }
+  ];
+
+  const openModal = (floor: FloorType) => {
+    setSelectedFloor(floor);
+  };
+
+  const closeModal = () => {
+    setSelectedFloor(null);
+  };
+
+  return (
+    <section className="container mx-auto mt-16 px-4">
+      <h2 className="mb-8 text-center text-3xl font-bold text-white">Nossos Tipos de Piso</h2>
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+        {floorTypes.map((floor) => (
+          <div
+            key={floor.name}
+            className="cursor-pointer overflow-hidden rounded-lg bg-gray-700 transition-transform hover:scale-105"
+            onClick={() => openModal(floor)}
+          >
+            <img
+              src={floor.image}
+              alt={floor.name}
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-4">
+              <h3 className="text-xl font-semibold text-white">{floor.name}</h3>
+              <p className="mt-2 text-gray-300">Clique para saber mais</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      {selectedFloor && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-lg p-6 max-w-md">
+            <h3 className="text-2xl font-bold mb-2">{selectedFloor.name}</h3>
+            <p className="text-gray-700 mb-4">{selectedFloor.description}</p>
+            <img
+              src={selectedFloor.image}
+              alt={selectedFloor.name}
+              className="w-full rounded-lg mb-4"
+            />
+            <button
+              onClick={closeModal}
+              className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+            >
+              Fechar
+            </button>
+          </div>
+        </div>
+      )}
+    </section>
+  );
+};
+
+
 
 const CriadeckPage: React.FC = () => {
   return (
@@ -88,6 +164,7 @@ const CriadeckPage: React.FC = () => {
       <Header />
       <MainSection />
       <ImageSection />
+      <FloorTypeSection />
     </div>
   );
 };
