@@ -64,13 +64,30 @@ const MainSection: React.FC = () => (
   </main>
 );
 
+const ImageSection: React.FC = () => {
+  const images = [img1, img2, img3];
+  return (
+    <section className="container mx-auto mt-16 grid grid-cols-1 gap-8 px-4 md:grid-cols-3">
+      {images.map((image, index) => (
+        <div key={index} className="relative h-48 overflow-hidden rounded-lg">
+          <img
+            src={image}
+            alt={`exemplo de uso ${index + 1}`}
+            className="h-full w-full object-cover"
+          />
+        </div>
+      ))}
+    </section>
+  );
+};
+
 
 const CriadeckPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-800">
       <Header />
       <MainSection />
-
+      <ImageSection />
     </div>
   );
 };
