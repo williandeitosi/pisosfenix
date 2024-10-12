@@ -41,11 +41,35 @@ const Header: React.FC = () => (
   </header>
 );
 
+const MainSection: React.FC = () => (
+  <main className="container mx-auto flex flex-col items-center justify-between px-4 py-16 md:flex-row">
+    <div className="mb-8 max-w-2xl text-center md:mb-0 md:text-left">
+      <h1 className="mb-4 text-4xl font-bold text-white">Aluguel de pisos plásticos</h1>
+      <p className="mb-6 text-xl text-green-400">Somos a base do entretenimento.</p>
+      <p className="mb-8 text-gray-300">
+        Desenvolvemos, fabricamos e alugamos soluções sustentáveis em pisos plásticos modulares para eventos.
+        Nossa expertise garante a melhor experiência para o seu público.
+      </p>
+      <button className="rounded-md bg-green-700 px-6 py-3 text-lg font-semibold text-white hover:bg-[#006400]">
+        Faça um orçamento
+      </button>
+    </div>
+    <div className="relative h-64 w-full md:h-96 md:w-1/2">
+      <img
+        src={mPhoto}
+        alt="Pisos plásticos empilhados"
+        className="h-full w-full object-contain"
+      />
+    </div>
+  </main>
+);
+
 
 const CriadeckPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-800">
       <Header />
+      <MainSection />
 
     </div>
   );
