@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import mLogo from "../assets/images/logo.png";
 import mPhoto from "../assets/images/mainphoto.jpeg";
 import img1 from "../assets/images/1.jpeg";
@@ -8,38 +8,57 @@ import pisoDeck from "../assets/images/piso-deck.jpeg";
 import pisoMadeira from "../assets/images/piso-madeira.jpeg";
 import estruturaImage from "../assets/images/estrutura.jpeg"; 
 
+interface StructureType {
+  name: string;
+  image: string;
+  title: string;
+  description: string;
+}
 
-const Header: React.FC = () => (
-  <header className="container mx-auto flex items-center justify-between p-4">
-    <img
-      src={mLogo}
-      alt="LDTPisos Logo"
-      className="h-10 w-auto brightness-0 invert"
-    />
-    <nav className="hidden space-x-4 md:flex">
-      {["Secao 1", "Secao 2", "Secao 3", "Secao 4"].map((item) => (
-        <a
-          key={item}
-          href={`#${item.toLowerCase()}`}
-          className="font-semibold text-gray-300 hover:text-green-600"
+interface FloorType {
+  name: string;
+  image: string;
+  description: string;
+}
+
+function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  return (
+    <header className="container mx-auto flex items-center justify-between p-4">
+      <img
+        src={mLogo}
+        alt="LDTPisos Logo"
+        className="h-10 w-auto brightness-0 invert"
+      />
+      <nav className={`${isMenuOpen ? 'block' : 'hidden'} space-y-4 md:space-y-0 md:space-x-4 md:flex`}>
+        {["Secao 1", "Secao 2", "Secao 3", "Secao 4"].map((item) => (
+          <a
+            key={item}
+            href={`#${item.toLowerCase().replace(' ', '-')}`}
+            className="block font-semibold text-gray-300 hover:text-green-600"
+          >
+            {item}
+          </a>
+        ))}
+      </nav>
+      <div className="flex items-center space-x-4">
+        <button className="rounded-md border border-green-500 px-4 py-2 text-green-500 hover:bg-green-500 hover:text-white">
+          Contato
+        </button>
+        <button 
+          className="md:hidden text-white"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
         >
-          {item}
-        </a>
-      ))}
-    </nav>
-    <div className="flex items-center space-x-4">
-      <button className="rounded-md border border-green-500 px-4 py-2 text-green-500 hover:bg-green-500 hover:text-white">
-        Contato
-      </button>
-      <button className="md:hidden text-white">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-        <span className="sr-only">Menu</span>
-      </button>
-    </div>
-  </header>
-);
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </header>
+  );
+}
 
 const MainSection: React.FC = () => (
   <main className="container mx-auto flex flex-col items-center justify-between px-4 py-16 md:flex-row">
@@ -80,12 +99,6 @@ const ImageSection: React.FC = () => {
     </section>
   );
 };
-
-interface FloorType {
-  name: string;
-  image: string;
-  description: string;
-}
 
 const FloorTypeSection: React.FC = () => {
   const [selectedFloor, setSelectedFloor] = useState<FloorType | null>(null);
@@ -156,31 +169,69 @@ const FloorTypeSection: React.FC = () => {
   );
 };
 
-const StructureSection: React.FC = () => (
-  <section className="container mx-auto flex flex-col-reverse items-center justify-between px-4 py-16 md:flex-row">
-    <div className="relative h-64 w-full md:h-96 md:w-1/2 mb-8 md:mb-0">
-      <img
-        src={estruturaImage}
-        alt="Nossa estrutura"
-        className="h-full w-full object-cover rounded-lg"
-      />
-    </div>
-    <div className="max-w-2xl text-center md:text-left md:ml-8">
-      <h2 className="mb-4 text-4xl font-bold text-white">Nossa estrutura</h2>
-      <p className="mb-6 text-xl text-green-400">Solidez e qualidade em cada peça.</p>
-      <p className="mb-8 text-gray-300">
-        Nossa estrutura é projetada para oferecer máxima estabilidade e durabilidade. 
-        Utilizamos materiais de alta qualidade e tecnologias avançadas para garantir 
-        que nossos pisos atendam às mais exigentes demandas de eventos e instalações.
-      </p>
-      <button className="rounded-md bg-green-700 px-6 py-3 text-lg font-semibold text-white hover:bg-[#006400]">
-        Faça um orçamento
-      </button>
-    </div>
-  </section>
-);
+const StructureSection: React.FC = () => {
+  const structures: StructureType[] = [
+    {
+      name: "DECK",
+      image: estruturaImage,
+      title: "Estrutura de Deck",
+      description: "Nossa estrutura de deck oferece uma base sólida e durável para eventos ao ar livre. Projetada para suportar grandes cargas e resistir às intempéries, é perfeita para festivais, feiras e exposições externas."
+    },
+    {
+      name: "MADEIRA",
+      image: pisoMadeira,
+      title: "Estrutura de Madeira",
+      description: "A estrutura de madeira combina elegância e resistência. Ideal para eventos internos, proporciona um visual sofisticado e acolhedor, mantendo a estabilidade necessária para diversos tipos de ocasiões."
+    }
+  ];
 
+  const [selectedStructure, setSelectedStructure] = useState<StructureType>(structures[0]);
 
+  useEffect(() => {
+    setSelectedStructure(structures[0]);
+  }, []);
+
+  return (
+    <section className="container mx-auto px-4 py-16">
+      <h2 className="text-4xl font-bold text-white text-center mb-8">Nossa Estrutura</h2>
+      
+      <div className="flex justify-center mb-8">
+        <div className="flex w-full max-w-md overflow-hidden rounded-md">
+          {structures.map((structure, index) => (
+            <button
+              key={structure.name}
+              onClick={() => setSelectedStructure(structure)}
+              className={`flex-1 py-2 px-4 text-sm font-medium transition-all ${
+                selectedStructure?.name === structure.name
+                  ? 'bg-green-500 text-white shadow-lg'
+                  : 'bg-gray-700 text-gray-300 hover:bg-green-400 hover:text-white hover:shadow-md'
+              } ${index === 0 ? 'rounded-l-md' : ''} ${index === structures.length - 1 ? 'rounded-r-md' : ''}`}
+            >
+              {structure.name}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
+          <img
+            src={selectedStructure.image}
+            alt={selectedStructure.title}
+            className="rounded-lg object-cover w-full h-[400px]"
+          />
+        </div>
+        <div className="w-full lg:w-1/2 lg:pl-8">
+          <h3 className="text-3xl font-bold text-green-400 mb-4">{selectedStructure.title}</h3>
+          <p className="text-gray-300 mb-6">{selectedStructure.description}</p>
+          <button className="rounded-md bg-green-500 px-6 py-2 text-sm font-medium text-white hover:bg-green-400 transition-all shadow-md hover:shadow-lg">
+            Faça um orçamento
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 const WhatsAppButton: React.FC = () => (
   <div className="fixed bottom-4 right-4">
