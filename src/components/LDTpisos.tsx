@@ -74,7 +74,7 @@ function Header() {
         <a
           className="rounded-md border border-green-500 px-4 py-2 text-green-500 hover:bg-green-500 hover:text-white"
           target="_blank"
-          href="https://wa.me/01511991430995?text=Ola,%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20com%20voc%C3%AAs"
+          href="https://wa.me/1511991430995?text=Ola,%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20com%20voc%C3%AAs"
         >
           {" "}
           Contato{" "}
@@ -121,7 +121,7 @@ const MainSection: React.FC = () => (
         </p>
         <a
           target="_blank"
-          href="https://wa.me/01511991430995?text=Ola,%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20com%20voc%C3%AAs"
+          href="https://wa.me/1511991430995?text=Ola,%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20com%20voc%C3%AAs"
           className="rounded-md bg-green-700 px-6 py-3 text-lg font-semibold text-white hover:bg-[#006400] "
         >
           Faça um orçamento
@@ -312,7 +312,7 @@ const StructureSection: React.FC = () => {
             </p>
             <a
               target="_blank"
-              href="https://wa.me/01511991430995?text=Ola,%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20com%20voc%C3%AAs"
+              href="https://wa.me/1511991430995?text=Ola,%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20com%20voc%C3%AAs"
               className="rounded-md bg-green-700 px-6 py-3 text-lg font-semibold text-white hover:bg-[#006400] "
             >
               Faça um orçamento
@@ -327,7 +327,7 @@ const StructureSection: React.FC = () => {
 const WhatsAppButton: React.FC = () => (
   <div className="fixed bottom-4 right-4 hover:scale-110 duration-150">
     <a
-      href="https://wa.me/01511991430995?text=Ola,%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20com%20voc%C3%AAs"
+      href="https://wa.me/1511991430995?text=Ola,%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20com%20voc%C3%AAs"
       target="_blank"
     >
       <img src={whatspp} alt="Botão Whatsapp" width={80} className="" />
