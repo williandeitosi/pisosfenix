@@ -1,20 +1,20 @@
+import { motion, useInView } from "framer-motion";
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
 import img1 from "../assets/images/1.jpeg";
 import img2 from "../assets/images/2.jpeg";
 import img3 from "../assets/images/3.jpeg";
-import img4 from "../assets/images/4.jpeg";
-import img5 from "../assets/images/4.jpeg";
+import { default as img4, default as img5 } from "../assets/images/4.jpeg";
 import img6 from "../assets/images/5.jpeg";
 import img7 from "../assets/images/6.jpeg";
-import img8 from "../assets/images/7.jpeg";
+import {
+  default as estruturaImage,
+  default as img8,
+} from "../assets/images/7.jpeg";
 import img9 from "../assets/images/8.jpeg";
 import mLogo from "../assets/images/logo.png";
 import mPhoto from "../assets/images/mainphoto.jpeg";
 import pisoDeck from "../assets/images/piso-deck.jpeg";
 import pisoMadeira from "../assets/images/piso-madeira.jpeg";
-import estruturaImage from "../assets/images/7.jpeg";
 import whatspp from "../assets/images/whatsapp.png";
 
 interface StructureType {
@@ -74,7 +74,7 @@ function Header() {
         <a
           className="rounded-md border border-green-500 px-4 py-2 text-green-500 hover:bg-green-500 hover:text-white"
           target="_blank"
-          href="https://wa.me/11991430995?text=Ola,%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20com%20voc%C3%AAs"
+          href="https://wa.me/01511991430995?text=Ola,%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20com%20voc%C3%AAs"
         >
           {" "}
           Contato{" "}
@@ -121,7 +121,7 @@ const MainSection: React.FC = () => (
         </p>
         <a
           target="_blank"
-          href="https://wa.me/11991430995?text=Ola,%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20com%20voc%C3%AAs"
+          href="https://wa.me/01511991430995?text=Ola,%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20com%20voc%C3%AAs"
           className="rounded-md bg-green-700 px-6 py-3 text-lg font-semibold text-white hover:bg-[#006400] "
         >
           Faça um orçamento
@@ -312,7 +312,7 @@ const StructureSection: React.FC = () => {
             </p>
             <a
               target="_blank"
-              href="https://wa.me/11991430995?text=Ola,%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20com%20voc%C3%AAs"
+              href="https://wa.me/01511991430995?text=Ola,%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20com%20voc%C3%AAs"
               className="rounded-md bg-green-700 px-6 py-3 text-lg font-semibold text-white hover:bg-[#006400] "
             >
               Faça um orçamento
@@ -327,7 +327,7 @@ const StructureSection: React.FC = () => {
 const WhatsAppButton: React.FC = () => (
   <div className="fixed bottom-4 right-4 hover:scale-110 duration-150">
     <a
-      href="https://wa.me/11991430995?text=Ola,%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20com%20voc%C3%AAs"
+      href="https://wa.me/01511991430995?text=Ola,%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20com%20voc%C3%AAs"
       target="_blank"
     >
       <img src={whatspp} alt="Botão Whatsapp" width={80} className="" />
