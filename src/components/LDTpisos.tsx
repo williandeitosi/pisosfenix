@@ -65,7 +65,7 @@ const WhatsAppButton: React.FC = () => (
 );
 
 function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen] = useState(false);
 
   return (
     <header className="container mx-auto flex items-center justify-between p-4">
