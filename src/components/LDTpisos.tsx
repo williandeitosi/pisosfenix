@@ -66,7 +66,7 @@ function Header() {
   const [isMenuOpen] = useState(false);
 
   return (
-    <header className="mx-20 flex items-center justify-between p-4">
+    <header className="md:mx-20 flex items-center justify-between p-4">
       <div className="flex gap-2 items-center ">
         <img
           src={mLogo}
@@ -92,7 +92,7 @@ function Header() {
 
 const MainSection: React.FC = () => (
   <AnimatedSection>
-    <main className="mx-20 flex flex-col items-center justify-between px-4 py-16 md:flex-row">
+    <main className="md:mx-20 flex flex-col items-center justify-between px-4 py-16 md:flex-row">
       <div className="mb-8 max-w-2xl text-center md:mb-0 md:text-left">
         <h1 className="mb-4 text-4xl font-bold text-white">
           Aluguel de pisos para eventos
@@ -131,7 +131,7 @@ const ImageSection: React.FC = () => {
         <h2 className="mb-8 text-center text-3xl font-bold text-white">
           Portfólio
         </h2>
-        <section className=" mx-20 mt-16 grid grid-cols-1 gap-8 px-4 md:grid-cols-3 ">
+        <section className=" md:mx-20 mt-16 grid grid-cols-1 gap-8 px-4 md:grid-cols-3 ">
           {images.map((image, index) => (
             <div
               key={index}
@@ -172,7 +172,7 @@ const FloorTypeSection: React.FC = () => {
         <h2 className="mb-8 text-center text-3xl font-bold text-white">
           Nossos Tipos de Piso
         </h2>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 mx-20">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:mx-20">
           {floorTypes.map((floor) => (
             <div
               key={floor.name}
@@ -243,7 +243,7 @@ const StructureSection: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 mx-20">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 md:mx-20">
           <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
             <img
               src={selectedStructure.image}
