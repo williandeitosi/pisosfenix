@@ -290,8 +290,7 @@ const Footer: React.FC = () => {
               />
               <p className="text-sm">
                 Somos a base do entretenimento. Desenvolvemos, fabricamos e
-                alugamos soluções sustentáveis em pisos plásticos modulares para
-                eventos.
+                alugamos nossos pisos modulares para eventos.
               </p>
             </div>
             <div className="w-full md:w-1/3">
