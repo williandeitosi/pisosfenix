@@ -15,8 +15,6 @@ import deck from "../assets/images/deck-capa.jpg";
 import mLogo from "../assets/images/logo.png";
 import mPhoto from "../assets/images/mainphoto.jpeg";
 import img5 from "../assets/images/novo-deck.jpg";
-import pisoDeck from "../assets/images/piso-deck.jpeg";
-import pisoMadeira from "../assets/images/piso-madeira.jpeg";
 import whatspp from "../assets/images/whatsapp.png";
 
 interface StructureType {
@@ -26,11 +24,11 @@ interface StructureType {
   description: string;
 }
 
-interface FloorType {
-  name: string;
-  image: string;
-  description: string;
-}
+// interface FloorType {
+//   name: string;
+//   image: string;
+//   description: string;
+// }
 interface AnimatedSectionProps {
   children: React.ReactNode;
 }
@@ -154,49 +152,49 @@ const ImageSection: React.FC = () => {
   );
 };
 
-const FloorTypeSection: React.FC = () => {
-  const floorTypes: FloorType[] = [
-    {
-      name: "Piso deck",
-      image: pisoMadeira,
-      description:
-        "Nosso piso deck é perfeito para áreas externas, oferecendo durabilidade e estética. Feito de materiais resistentes às intempéries, é ideal para eventos ao ar livre, piscinas e terraços.",
-    },
-    {
-      name: "Piso de Ferro",
-      image: pisoDeck,
-      description:
-        "O piso madeira combina a beleza natural da madeira com a praticidade do plástico. É excelente para eventos internos, proporcionando um ambiente acolhedor e sofisticado, sem a necessidade de manutenção intensiva.",
-    },
-  ];
+// const FloorTypeSection: React.FC = () => {
+//   const floorTypes: FloorType[] = [
+//     {
+//       name: "Piso deck",
+//       image: pisoMadeira,
+//       description:
+//         "Nosso piso deck é perfeito para áreas externas, oferecendo durabilidade e estética. Feito de materiais resistentes às intempéries, é ideal para eventos ao ar livre, piscinas e terraços.",
+//     },
+//     {
+//       name: "Piso de Ferro",
+//       image: pisoDeck,
+//       description:
+//         "O piso madeira combina a beleza natural da madeira com a praticidade do plástico. É excelente para eventos internos, proporcionando um ambiente acolhedor e sofisticado, sem a necessidade de manutenção intensiva.",
+//     },
+//   ];
 
-  return (
-    <AnimatedSection>
-      <section className="mt-16 px-4">
-        <h2 className="mb-8 text-center text-3xl font-bold text-white">
-          Nossos Tipos de Piso
-        </h2>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:mx-20">
-          {floorTypes.map((floor) => (
-            <div
-              key={floor.name}
-              className="cursor-pointer overflow-hidden rounded-lg bg-gray-700 transition-transform hover:scale-105"
-            >
-              <h3 className="text-xl font-semibold text-white text-center py-2">
-                {floor.name}
-              </h3>
-              <img
-                src={floor.image}
-                alt={floor.name}
-                className="w-full h-48 object-cover"
-              />
-            </div>
-          ))}
-        </div>
-      </section>
-    </AnimatedSection>
-  );
-};
+//   return (
+//     <AnimatedSection>
+//       <section className="mt-16 px-4">
+//         <h2 className="mb-8 text-center text-3xl font-bold text-white">
+//           Nossos Tipos de Piso
+//         </h2>
+//         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:mx-20">
+//           {floorTypes.map((floor) => (
+//             <div
+//               key={floor.name}
+//               className="cursor-pointer overflow-hidden rounded-lg bg-gray-700 transition-transform hover:scale-105"
+//             >
+//               <h3 className="text-xl font-semibold text-white text-center py-2">
+//                 {floor.name}
+//               </h3>
+//               <img
+//                 src={floor.image}
+//                 alt={floor.name}
+//                 className="w-full h-48 object-cover"
+//               />
+//             </div>
+//           ))}
+//         </div>
+//       </section>
+//     </AnimatedSection>
+//   );
+// };
 
 const StructureSection: React.FC = () => {
   const structures: StructureType[] = [
@@ -326,7 +324,7 @@ const LDTPisosPage: React.FC = () => {
         <Header />
         <MainSection />
         <ImageSection />
-        <FloorTypeSection />
+        {/* <FloorTypeSection /> */}
         <StructureSection />
         <Footer />
       </motion.div>
