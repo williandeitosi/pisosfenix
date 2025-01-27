@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import img1 from "../assets/images/1.jpeg";
 import img2 from "../assets/images/2.jpeg";
 import img3 from "../assets/images/3.jpeg";
-import { default as img4, default as img5 } from "../assets/images/4.jpeg";
+import img4 from "../assets/images/4.jpeg";
 import img6 from "../assets/images/5.jpeg";
 import img7 from "../assets/images/6.jpeg";
 import {
@@ -11,8 +11,10 @@ import {
   default as img8,
 } from "../assets/images/7.jpeg";
 import img9 from "../assets/images/8.jpeg";
+import deck from "../assets/images/deck-capa.jpg";
 import mLogo from "../assets/images/logo.png";
 import mPhoto from "../assets/images/mainphoto.jpeg";
+import img5 from "../assets/images/novo-deck.jpg";
 import pisoDeck from "../assets/images/piso-deck.jpeg";
 import pisoMadeira from "../assets/images/piso-madeira.jpeg";
 import whatspp from "../assets/images/whatsapp.png";
@@ -84,7 +86,9 @@ function Header() {
         </nav>
       </div>
       <div className="flex items-center space-x-4">
-        <p className="rounded-md px-4 py-2 text-green-500">(11)99143-0995</p>
+        <p className="rounded-md px-4 py-2 text-green-500 text-xl">
+          (11)99143-0995
+        </p>
       </div>
     </header>
   );
@@ -198,17 +202,17 @@ const StructureSection: React.FC = () => {
   const structures: StructureType[] = [
     {
       name: "DECK",
-      image: pisoMadeira,
+      image: deck,
       title: "Estrutura de Deck",
       description:
-        "Nossa estrutura de deck oferece uma base sólida e durável para eventos ao ar livre. Projetada para suportar grandes cargas e resistir às intempéries, é perfeita para festivais, feiras e exposições externas.",
+        "Nossa estrutura de deck oferece uma base sólida e durável para eventos ao ar livre. Projetada para suportar grandes cargas, é perfeita para festivais, feiras e exposições externas.",
     },
     {
       name: "MADEIRA",
       image: estruturaImage,
       title: "Estrutura de Madeira",
       description:
-        "A estrutura de madeira combina elegância e resistência. Ideal para eventos internos, proporciona um visual sofisticado e acolhedor, mantendo a estabilidade necessária para diversos tipos de ocasiões.",
+        "A estrutura de madeira é mais robusta e feita para suportar mais peso e resistência. Ideal para eventos internos, proporciona um visual sofisticado podendo conter uma forração de carpete em cima para deixar o ambiente mais acolhedor, mantendo a estabilidade necessária para diversos tipos de ocasiões.",
     },
   ];
 
