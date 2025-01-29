@@ -60,13 +60,20 @@ const WhatsAppButton: React.FC = () => (
 function Header() {
   return (
     <header className="md:mx-20 flex items-center justify-between p-4">
-      <div className="flex flex-col md:flex-row gap-2 items-center ">
+      <div className="flex flex-col md:flex-row gap-2 items-center">
         <img
           src={mLogo}
           alt="Pisos Fênix"
           className="h-8 md:h-10 w-auto brightness-0 invert"
         />
-        <h1 className=" font-semibold text-gray-300 text-xl">Pisos Fênix</h1>
+        <div className="flex flex-col">
+          <h1 className=" font-semibold text-gray-300 text-xl mx-auto md:mx-0 ">
+            Pisos Fênix
+          </h1>
+          <p className=" font-semibold text-gray-300 text-xs md:text-sm">
+            LDT Locação de Pisos e Palcos Ltda
+          </p>
+        </div>
       </div>
       <div className="flex items-center space-x-4">
         <p className="rounded-md px-4 py-2 text-green-500 text-xl">
@@ -89,9 +96,9 @@ const MainSection: React.FC = () => (
         </p>
         <p className="mb-8 text-gray-300">
           Nossa empresa esta no mercado a mais de 20 anos, fabricando e locando
-          pisos para seu evento. Trabalhos com tablados de madeira, pisos deck e
-          pisos de ferro com regulagem de altura, atendemos todos os tipos de
-          eventos
+          pisos para seu evento. Trabalhamos com tablados de madeira, pisos deck
+          e pisos de ferro com regulagem de altura, atendemos todos os tipos de
+          eventos.
         </p>
         <a
           target="_blank"
@@ -151,7 +158,7 @@ const StructureSection: React.FC = () => {
     {
       name: "FERRO",
       image: estruturaImage,
-      title: "Estrutura de Madeira",
+      title: "Estrutura de Ferro",
       description: `Nosso piso de ferro é projetado para garantir agilidade, alinhamento e nivelamento para a montagem do evento. Ele é composto por travessas de metal e um sistema de regulagem de altura, por meio de um pé ajustável (macaquinho). Além disso, utilizamos uma placa de madeira de 1x1 com 25mm de espessura para reforçar ainda mais a estrutura, sendo possível adicionar uma chapa de madeira de 2,20 x 1,10, parafusada em cima destas placas, proporcionando maior resistência e estabilidade ao piso, onde receberá o acabamento final (forração em carpete, vinílico ou de sua preferência). Também trabalhamos com tablados de madeira, módulos inteiros com diversas medidas. Outra opção para o seu evento.`,
     },
   ];
