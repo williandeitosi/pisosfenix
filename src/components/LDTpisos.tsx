@@ -76,7 +76,7 @@ function Header() {
         </div>
       </div>
       <div className="flex items-center space-x-4">
-        <p className="rounded-md px-4 py-2 text-green-500 text-xl">
+        <p className="rounded-md px-4 py-2 text-green-500 md:text-xl text-sm">
           (11)99143-0995
         </p>
       </div>
