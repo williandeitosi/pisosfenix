@@ -24,11 +24,6 @@ interface StructureType {
   description: string;
 }
 
-// interface FloorType {
-//   name: string;
-//   image: string;
-//   description: string;
-// }
 interface AnimatedSectionProps {
   children: React.ReactNode;
 }
@@ -63,25 +58,15 @@ const WhatsAppButton: React.FC = () => (
 );
 
 function Header() {
-  const [isMenuOpen] = useState(false);
-
   return (
     <header className="md:mx-20 flex items-center justify-between p-4">
-      <div className="flex gap-2 items-center ">
+      <div className="flex flex-col md:flex-row gap-2 items-center ">
         <img
           src={mLogo}
-          alt="LDTPisos Logo"
-          className="h-10 w-auto brightness-0 invert"
+          alt="Pisos Fênix"
+          className="h-8 md:h-10 w-auto brightness-0 invert"
         />
-        <nav
-          className={`${
-            isMenuOpen ? "block" : "hidden"
-          } space-y-4 md:space-y-0 md:space-x-4 md:flex`}
-        >
-          <h1 className="block font-semibold text-gray-300 text-xl">
-            Pisos Fênix
-          </h1>
-        </nav>
+        <h1 className=" font-semibold text-gray-300 text-xl">Pisos Fênix</h1>
       </div>
       <div className="flex items-center space-x-4">
         <p className="rounded-md px-4 py-2 text-green-500 text-xl">
@@ -103,8 +88,10 @@ const MainSection: React.FC = () => (
           Somos a base do entretenimento.
         </p>
         <p className="mb-8 text-gray-300">
-          Trabalhos com tablados de madeira, pisos deck e pisos de ferro com
-          regulagem de altura, atendemos todos os tipos de eventos
+          Nossa empresa esta no mercado a mais de 20 anos, fabricando e locando
+          pisos para seu evento. Trabalhos com tablados de madeira, pisos deck e
+          pisos de ferro com regulagem de altura, atendemos todos os tipos de
+          eventos
         </p>
         <a
           target="_blank"
@@ -126,7 +113,7 @@ const MainSection: React.FC = () => (
 );
 
 const ImageSection: React.FC = () => {
-  const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
+  const images = [img2, img5, img1, img3, img4, img6, img7, img8, img9];
   return (
     <AnimatedSection>
       <div>
@@ -152,50 +139,6 @@ const ImageSection: React.FC = () => {
   );
 };
 
-// const FloorTypeSection: React.FC = () => {
-//   const floorTypes: FloorType[] = [
-//     {
-//       name: "Piso deck",
-//       image: pisoMadeira,
-//       description:
-//         "Nosso piso deck é perfeito para áreas externas, oferecendo durabilidade e estética. Feito de materiais resistentes às intempéries, é ideal para eventos ao ar livre, piscinas e terraços.",
-//     },
-//     {
-//       name: "Piso de Ferro",
-//       image: pisoDeck,
-//       description:
-//         "O piso madeira combina a beleza natural da madeira com a praticidade do plástico. É excelente para eventos internos, proporcionando um ambiente acolhedor e sofisticado, sem a necessidade de manutenção intensiva.",
-//     },
-//   ];
-
-//   return (
-//     <AnimatedSection>
-//       <section className="mt-16 px-4">
-//         <h2 className="mb-8 text-center text-3xl font-bold text-white">
-//           Nossos Tipos de Piso
-//         </h2>
-//         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:mx-20">
-//           {floorTypes.map((floor) => (
-//             <div
-//               key={floor.name}
-//               className="cursor-pointer overflow-hidden rounded-lg bg-gray-700 transition-transform hover:scale-105"
-//             >
-//               <h3 className="text-xl font-semibold text-white text-center py-2">
-//                 {floor.name}
-//               </h3>
-//               <img
-//                 src={floor.image}
-//                 alt={floor.name}
-//                 className="w-full h-48 object-cover"
-//               />
-//             </div>
-//           ))}
-//         </div>
-//       </section>
-//     </AnimatedSection>
-//   );
-// };
-
 const StructureSection: React.FC = () => {
   const structures: StructureType[] = [
     {
@@ -203,14 +146,13 @@ const StructureSection: React.FC = () => {
       image: deck,
       title: "Estrutura de Deck",
       description:
-        "Nossa estrutura de deck oferece uma base sólida e durável para eventos ao ar livre. Projetada para suportar grandes cargas, é perfeita para festivais, feiras e exposições externas.",
+        "Nosso piso deck é composto com a base em estrutura metalica, pés ajustáveis para nivelamento da area, e madeira tratada resistente ao tempo. Perfeito para eventos externos e internos. Suportando pesos, ideal para festivais, feiras, exposições e eventos corporativos.",
     },
     {
-      name: "MADEIRA",
+      name: "FERRO",
       image: estruturaImage,
       title: "Estrutura de Madeira",
-      description:
-        "A estrutura de madeira é mais robusta e feita para suportar mais peso e resistência. Ideal para eventos internos, proporciona um visual sofisticado podendo conter uma forração de carpete em cima para deixar o ambiente mais acolhedor, mantendo a estabilidade necessária para diversos tipos de ocasiões.",
+      description: `Nosso piso de ferro é projetado para garantir agilidade, alinhamento e nivelamento para a montagem do evento. Ele é composto por travessas de metal e um sistema de regulagem de altura, por meio de um pé ajustável (macaquinho). Além disso, utilizamos uma placa de madeira de 1x1 com 25mm de espessura para reforçar ainda mais a estrutura, sendo possível adicionar uma chapa de madeira de 2,20 x 1,10, parafusada em cima destas placas, proporcionando maior resistência e estabilidade ao piso, onde receberá o acabamento final (forração em carpete, vinílico ou de sua preferência). Também trabalhamos com tablados de madeira, módulos inteiros com diversas medidas. Outra opção para o seu evento.`,
     },
   ];
 
@@ -302,7 +244,7 @@ const Footer: React.FC = () => {
           </div>
           <div className="mt-8 border-t border-gray-700 pt-8 text-center">
             <p className="text-sm">
-              © {currentYear} LDTPisos. Todos os direitos reservados.
+              © {currentYear} Pisos Fênix. Todos os direitos reservados.
             </p>
           </div>
         </div>
@@ -319,11 +261,9 @@ const LDTPisosPage: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        :
         <Header />
         <MainSection />
         <ImageSection />
-        {/* <FloorTypeSection /> */}
         <StructureSection />
         <Footer />
       </motion.div>
