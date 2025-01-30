@@ -332,7 +332,7 @@ const Footer: React.FC = () => {
             </div>
             <div className="w-full md:w-1/3">
               <h3 className="text-lg font-semibold my-4"> Contato</h3>
-              <p className="mb-2">Email: pisosldt@outlook.com.br</p>
+              <p className="mb-2">Email: pisosldt@outlook.com</p>
               <p className="mb-2">Telefone: (11)99143-0995</p>
               <div className="flex space-x-4 mt-4"></div>
             </div>
