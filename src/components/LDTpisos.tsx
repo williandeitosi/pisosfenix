@@ -17,6 +17,14 @@ import mPhoto from "../assets/images/mainphoto.jpeg";
 import img5 from "../assets/images/novo-deck.jpg";
 import whatspp from "../assets/images/whatsapp.png";
 
+import logo2m from "../assets/clientes/2m.jpeg";
+import logoAfinal from "../assets/clientes/afinal.jpeg";
+import logoCenaria from "../assets/clientes/cenaria.png";
+import logoDeep from "../assets/clientes/deep.png";
+import logoMaxxy from "../assets/clientes/maxxy.png";
+import logoProloja from "../assets/clientes/prolojacenografia_logo.jpeg";
+import logoVertical from "../assets/clientes/vertical.png";
+
 interface StructureType {
   name: string;
   image: string;
@@ -230,7 +238,7 @@ const StructureSection: React.FC = () => {
             <div className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 rounded-full overflow-hidden hover:scale-110 transition-transform duration-300">
               <img
                 className="w-full h-full object-cover"
-                src="../../src/assets/clientes/2m.jpeg"
+                src={logo2m}
                 alt="2m"
                 loading="lazy"
               />
@@ -239,7 +247,7 @@ const StructureSection: React.FC = () => {
             <div className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 rounded-full overflow-hidden hover:scale-110 transition-transform duration-300">
               <img
                 className="w-full h-full object-cover"
-                src="../../src/assets/clientes/afinal.jpeg"
+                src={logoAfinal}
                 alt="afinal"
                 loading="lazy"
               />
@@ -248,7 +256,7 @@ const StructureSection: React.FC = () => {
             <div className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 rounded-full overflow-hidden hover:scale-110 transition-transform duration-300">
               <img
                 className="w-full h-full object-cover"
-                src="../../src/assets/clientes/cenaria.png"
+                src={logoCenaria}
                 alt="cenaria"
                 loading="lazy"
               />
@@ -257,7 +265,7 @@ const StructureSection: React.FC = () => {
             <div className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 rounded-full overflow-hidden hover:scale-110 transition-transform duration-300">
               <img
                 className="w-full h-full object-cover"
-                src="../../src/assets/clientes/deep.png"
+                src={logoDeep}
                 alt="deep"
                 loading="lazy"
               />
@@ -266,7 +274,7 @@ const StructureSection: React.FC = () => {
             <div className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 rounded-full overflow-hidden hover:scale-110 transition-transform duration-300">
               <img
                 className="w-full h-full object-content"
-                src="../../src/assets/clientes/maxxy.png"
+                src={logoMaxxy}
                 alt="maxxy"
                 loading="lazy"
               />
@@ -275,7 +283,7 @@ const StructureSection: React.FC = () => {
             <div className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 rounded-full overflow-hidden hover:scale-110 transition-transform duration-300">
               <img
                 className="w-full h-full object-cover"
-                src="../../src/assets/clientes/prolojacenografia_logo.jpeg"
+                src={logoProloja}
                 alt="prolojacenografia_logo"
                 loading="lazy"
               />
@@ -284,7 +292,7 @@ const StructureSection: React.FC = () => {
             <div className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 rounded-full overflow-hidden hover:scale-110 transition-transform duration-300">
               <img
                 className="w-full h-full object-cover"
-                src="../../src/assets/clientes/vertical.png"
+                src={logoVertical}
                 alt="vertical"
                 loading="lazy"
               />
