@@ -113,6 +113,7 @@ const MainSection: React.FC = () => (
           src={mPhoto}
           alt="Pisos plásticos empilhados"
           className="h-full w-full object-cover rounded-lg "
+          loading="lazy"
         />
       </div>
     </main>
@@ -137,6 +138,7 @@ const ImageSection: React.FC = () => {
                 src={image}
                 alt={`exemplo de uso ${index + 1}`}
                 className="h-full w-full object-cover"
+                loading="lazy"
               />
             </div>
           ))}
@@ -200,6 +202,7 @@ const StructureSection: React.FC = () => {
               src={selectedStructure.image}
               alt={selectedStructure.title}
               className="rounded-lg object-cover w-full h-[400px]"
+              loading="lazy"
             />
           </div>
           <div className="w-full lg:w-1/2 lg:pl-8">
@@ -216,6 +219,76 @@ const StructureSection: React.FC = () => {
             >
               Faça um orçamento
             </a>
+          </div>
+        </div>
+        <div className="flex flex-col items-center justify-center px-4 md:px-8">
+          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white text-center my-8 md:my-12">
+            Nossos Clientes
+          </h3>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6 md:gap-8 max-w-7xl">
+            <div className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 rounded-full overflow-hidden hover:scale-110 transition-transform duration-300">
+              <img
+                className="w-full h-full object-cover"
+                src="../../src/assets/clientes/2m.jpeg"
+                alt="2m"
+                loading="lazy"
+              />
+            </div>
+
+            <div className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 rounded-full overflow-hidden hover:scale-110 transition-transform duration-300">
+              <img
+                className="w-full h-full object-cover"
+                src="../../src/assets/clientes/afinal.jpeg"
+                alt="afinal"
+                loading="lazy"
+              />
+            </div>
+
+            <div className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 rounded-full overflow-hidden hover:scale-110 transition-transform duration-300">
+              <img
+                className="w-full h-full object-cover"
+                src="../../src/assets/clientes/cenaria.png"
+                alt="cenaria"
+                loading="lazy"
+              />
+            </div>
+
+            <div className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 rounded-full overflow-hidden hover:scale-110 transition-transform duration-300">
+              <img
+                className="w-full h-full object-cover"
+                src="../../src/assets/clientes/deep.png"
+                alt="deep"
+                loading="lazy"
+              />
+            </div>
+
+            <div className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 rounded-full overflow-hidden hover:scale-110 transition-transform duration-300">
+              <img
+                className="w-full h-full object-content"
+                src="../../src/assets/clientes/maxxy.png"
+                alt="maxxy"
+                loading="lazy"
+              />
+            </div>
+
+            <div className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 rounded-full overflow-hidden hover:scale-110 transition-transform duration-300">
+              <img
+                className="w-full h-full object-cover"
+                src="../../src/assets/clientes/prolojacenografia_logo.jpeg"
+                alt="prolojacenografia_logo"
+                loading="lazy"
+              />
+            </div>
+
+            <div className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 rounded-full overflow-hidden hover:scale-110 transition-transform duration-300">
+              <img
+                className="w-full h-full object-cover"
+                src="../../src/assets/clientes/vertical.png"
+                alt="vertical"
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -236,11 +309,18 @@ const Footer: React.FC = () => {
                 src={mLogo}
                 alt="LDTPisos Logo"
                 className="h-10 w-auto brightness-0 invert mb-4"
+                loading="lazy"
               />
               <p className="text-sm">
                 Somos a base do entretenimento. Desenvolvemos, fabricamos e
                 alugamos nossos pisos modulares para eventos.
               </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Endereço</h3>
+              <p>Rua Dr Jose Cioff, 102</p>
+              <p>São Mateus - São Paulo/ SP</p>
+              <p>CEP: 03963-050</p>
             </div>
             <div className="w-full md:w-1/3">
               <h3 className="text-lg font-semibold mb-4"> Contato</h3>
