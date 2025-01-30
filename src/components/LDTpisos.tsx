@@ -6,15 +6,13 @@ import img3 from "../assets/images/3.jpeg";
 import img4 from "../assets/images/4.jpeg";
 import img6 from "../assets/images/5.jpeg";
 import img7 from "../assets/images/6.jpeg";
-import {
-  default as estruturaImage,
-  default as img8,
-} from "../assets/images/7.jpeg";
+import { default as img8 } from "../assets/images/7.jpeg";
 import img9 from "../assets/images/8.jpeg";
 import deck from "../assets/images/deck-capa.jpg";
 import mLogo from "../assets/images/logo.png";
 import mPhoto from "../assets/images/mainphoto.jpeg";
 import img5 from "../assets/images/novo-deck.jpg";
+import travessaFerro from "../assets/images/travessa.jpg";
 import whatspp from "../assets/images/whatsapp.png";
 
 import logo2m from "../assets/clientes/2m.jpeg";
@@ -167,7 +165,7 @@ const StructureSection: React.FC = () => {
     },
     {
       name: "FERRO",
-      image: estruturaImage,
+      image: travessaFerro,
       title: "Estrutura de Ferro",
       description: `Nosso piso de ferro é projetado para garantir agilidade, alinhamento e nivelamento para a montagem do evento. Ele é composto por travessas de metal e um sistema de regulagem de altura, por meio de um pé ajustável (macaquinho). Além disso, utilizamos uma placa de madeira de 1x1 com 25mm de espessura para reforçar ainda mais a estrutura, sendo possível adicionar uma chapa de madeira de 2,20 x 1,10, parafusada em cima destas placas, proporcionando maior resistência e estabilidade ao piso, onde receberá o acabamento final (forração em carpete, vinílico ou de sua preferência). Também trabalhamos com tablados de madeira, módulos inteiros com diversas medidas. Outra opção para o seu evento.`,
     },
