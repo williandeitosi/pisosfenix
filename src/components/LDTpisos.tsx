@@ -325,13 +325,13 @@ const Footer: React.FC = () => {
               </p>
             </div>
             <div>
-              <h3 className="text-lg font-semibold mb-4">Endereço</h3>
+              <h3 className="text-lg font-semibold my-4">Endereço</h3>
               <p>Rua Dr Jose Cioff, 102</p>
               <p>São Mateus - São Paulo/ SP</p>
               <p>CEP: 03963-050</p>
             </div>
             <div className="w-full md:w-1/3">
-              <h3 className="text-lg font-semibold mb-4"> Contato</h3>
+              <h3 className="text-lg font-semibold my-4"> Contato</h3>
               <p className="mb-2">Email: pisosldt@outlook.com.br</p>
               <p className="mb-2">Telefone: (11)99143-0995</p>
               <div className="flex space-x-4 mt-4"></div>
