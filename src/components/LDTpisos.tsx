@@ -13,7 +13,6 @@ import mLogo from "../assets/images/logo.png";
 import mPhoto from "../assets/images/mainphoto.jpeg";
 import img5 from "../assets/images/novo-deck.jpg";
 import travessaFerro from "../assets/images/travessa.jpg";
-import whatspp from "../assets/images/whatsapp.png";
 
 import logo2m from "../assets/clientes/2m.jpeg";
 import logoAfinal from "../assets/clientes/afinal.jpeg";
@@ -22,6 +21,7 @@ import logoDeep from "../assets/clientes/deep.png";
 import logoMaxxy from "../assets/clientes/maxxy.png";
 import logoProloja from "../assets/clientes/prolojacenografia_logo.jpeg";
 import logoVertical from "../assets/clientes/vertical.png";
+import { WhatsAppLink } from "../components/whatsappButton";
 
 interface StructureType {
   name: string;
@@ -51,17 +51,6 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({ children }) => {
     </motion.div>
   );
 };
-
-const WhatsAppButton: React.FC = () => (
-  <a
-    href="https://wa.me/5511991430995?text=Ola,%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20com%20voc%C3%AAs"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="block fixed bottom-4 right-4 z-50 hover:scale-110 transition-transform duration-200"
-  >
-    <img src={whatspp} alt="Botão Whatsapp" width={80} height={80} />
-  </a>
-);
 
 function Header() {
   return (
@@ -106,13 +95,7 @@ const MainSection: React.FC = () => (
           e pisos de ferro com regulagem de altura, atendemos todos os tipos de
           eventos.
         </p>
-        <a
-          target="_blank"
-          href="https://wa.me/5511991430995?text=Ola,%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20com%20voc%C3%AAs"
-          className="rounded-md bg-green-700 px-6 py-3 text-lg font-semibold text-white hover:bg-[#006400] "
-        >
-          Faça um orçamento
-        </a>
+        <WhatsAppLink variant="button" />
       </div>
       <div className="relative h-64 w-full md:h-96 md:w-2/5 border-4 border-green-500 rounded-xl border-opacity-20 hover:scale-105 duration-300 ">
         <img
@@ -218,13 +201,7 @@ const StructureSection: React.FC = () => {
             <p className="text-gray-300 mb-6">
               {selectedStructure.description}
             </p>
-            <a
-              target="_blank"
-              href="https://wa.me/5511991430995?text=Ola,%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20com%20voc%C3%AAs"
-              className="rounded-md bg-green-700 px-6 py-3 text-lg font-semibold text-white hover:bg-[#006400] "
-            >
-              Faça um orçamento
-            </a>
+            <WhatsAppLink variant="button" />
           </div>
         </div>
         <div className="flex flex-col items-center justify-center px-4 md:px-8">
@@ -360,7 +337,7 @@ const LDTPisosPage: React.FC = () => {
         <StructureSection />
         <Footer />
       </motion.div>
-      <WhatsAppButton />
+      <WhatsAppLink variant="icon" />
     </div>
   );
 };
