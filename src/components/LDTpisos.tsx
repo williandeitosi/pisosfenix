@@ -23,6 +23,10 @@ import logoProloja from "../assets/clientes/prolojacenografia_logo.jpeg";
 import logoVertical from "../assets/clientes/vertical.png";
 import { WhatsAppLink } from "../components/whatsappButton";
 
+import palco01 from "../assets/images/palco-01.jpg";
+import palco02 from "../assets/images/palco-02.jpg";
+import palco03 from "../assets/images/palco-03.jpg";
+
 interface StructureType {
   name: string;
   image: string;
@@ -84,16 +88,16 @@ const MainSection: React.FC = () => (
     <main className="md:mx-20 flex flex-col items-center justify-between px-4 py-16 md:flex-row">
       <div className="mb-8 max-w-2xl text-center md:mb-0 md:text-left">
         <h1 className="mb-4 text-4xl font-bold text-white">
-          Aluguel de pisos para eventos
+          Aluguel de pisos e palcos para eventos
         </h1>
         <p className="mb-6 text-xl text-green-400">
           Somos a base do entretenimento.
         </p>
         <p className="mb-8 text-gray-300">
           Nossa empresa esta no mercado a mais de 20 anos, fabricando e locando
-          pisos para seu evento. Trabalhamos com tablados de madeira, pisos deck
-          e pisos de ferro com regulagem de altura, atendemos todos os tipos de
-          eventos.
+          pisos e palcos para seu evento. Trabalhamos com tablados de madeira,
+          pisos deck, palcos e pisos de ferro com regulagem de altura, atendemos
+          todos os tipos de eventos.
         </p>
         <WhatsAppLink variant="button" />
       </div>
@@ -110,7 +114,20 @@ const MainSection: React.FC = () => (
 );
 
 const ImageSection: React.FC = () => {
-  const images = [img2, img5, img1, img3, img4, img6, img7, img8, img9];
+  const images = [
+    img2,
+    img5,
+    img1,
+    img3,
+    img4,
+    img6,
+    img7,
+    img8,
+    img9,
+    palco01,
+    palco02,
+    palco03,
+  ];
   return (
     <AnimatedSection>
       <div>
