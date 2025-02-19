@@ -95,9 +95,9 @@ const MainSection: React.FC = () => (
         </p>
         <p className="mb-8 text-gray-300">
           Nossa empresa esta no mercado a mais de 20 anos, fabricando e locando
-          pisos e palcos para seu evento. Trabalhamos com tablados de madeira,
-          pisos deck, palcos e pisos de ferro com regulagem de altura, atendemos
-          todos os tipos de eventos.
+          pisos e palcos. Trabalhamos com tablados de madeira, pisos deck,
+          palcos e pisos de ferro com regulagem de altura, atendemos todos os
+          tipos de eventos.
         </p>
         <WhatsAppLink variant="button" />
       </div>
